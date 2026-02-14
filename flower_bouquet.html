@@ -92,17 +92,17 @@
             position: relative;
             z-index: 10;
             animation: bouquetRise 3.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-            transform: translateY(100vh) scale(0.7);
+            transform: translateY(100vh) scale(0.8);
             filter: drop-shadow(0 20px 40px rgba(0,0,0,0.2));
         }
 
         @keyframes bouquetRise {
             0% {
-                transform: translateY(100vh) scale(0.7) rotate(-5deg);
+                transform: translateY(100vh) scale(0.8) rotate(-5deg);
                 opacity: 0;
             }
             100% { 
-                transform: translateY(0) scale(1) rotate(0deg);
+                transform: translateY(0) scale(1.12) rotate(0deg);
                 opacity: 1;
             }
         }
@@ -246,8 +246,10 @@
         /* Flowers Container */
         .flowers {
             position: relative;
-            width: 420px;
-            height: 450px;
+            width: 480px;
+            height: 500px;
+            transform-origin: center bottom;
+            filter: drop-shadow(0 10px 25px rgba(0,0,0,0.25));
         }
 
         /* Individual Flower Styles */
@@ -255,6 +257,7 @@
             position: absolute;
             animation: bloomIn 2.5s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
             transition: transform 0.4s ease;
+            filter: drop-shadow(0 4px 10px rgba(0,0,0,0.25));
         }
 
         @keyframes bloomIn {
@@ -321,6 +324,7 @@
             box-shadow: 
                 inset -4px -4px 12px rgba(0,0,0,0.3),
                 0 6px 18px rgba(0,0,0,0.3);
+            border: 1px solid rgba(120, 0, 0, 0.35);
         }
 
         .rose-red .rose-petal {
@@ -329,7 +333,8 @@
 
         .rose-pink-1 .rose-petal,
         .rose-pink-2 .rose-petal {
-            background: radial-gradient(ellipse at 30% 30%, #ffb6d9 0%, #ff85c0 40%, #ff69b4 100%);
+            background: radial-gradient(ellipse at 30% 30%, #ffe3f2 0%, #ffb6d9 35%, #ff85c0 65%, #ff69b4 100%);
+            border-color: rgba(199, 21, 133, 0.35);
         }
 
         .rose-petal:nth-child(1) { transform: rotate(0deg) translateX(22px); }
@@ -350,7 +355,7 @@
         }
 
         .rose-red .rose-center {
-            background: radial-gradient(circle at 30% 30%, #a01830 0%, #8b0000 100%);
+            background: radial-gradient(circle at 25% 25%, #ffccd5 0%, #c41e3a 40%, #8b0000 100%);
         }
 
         .rose-pink-1 .rose-center,
@@ -360,8 +365,8 @@
 
         /* Lily */
         .lily {
-            width: 100px;
-            height: 110px;
+            width: 115px;
+            height: 125px;
             left: 52%;
             top: 20px;
             animation-delay: 4.2s;
@@ -377,9 +382,9 @@
 
         .lily-petal {
             position: absolute;
-            width: 40px;
-            height: 70px;
-            background: linear-gradient(180deg, #ffffff 0%, #fffafd 30%, #ffe8f5 100%);
+            width: 44px;
+            height: 78px;
+            background: radial-gradient(circle at 20% 10%, #ffffff 0%, #fffafd 35%, #ffe8f5 70%, #f8bcd6 100%);
             border-radius: 50% 50% 50% 50% / 70% 70% 30% 30%;
             box-shadow: 
                 inset 0 -3px 8px rgba(255, 182, 193, 0.3),
@@ -507,10 +512,10 @@
 
         /* Sunflower */
         .sunflower {
-            width: 95px;
-            height: 95px;
-            right: 18%;
-            top: 95px;
+            width: 110px;
+            height: 110px;
+            right: 17%;
+            top: 85px;
             animation-delay: 4.3s;
             z-index: 10;
             transform: rotate(22deg);
@@ -524,14 +529,15 @@
 
         .sunflower-petal {
             position: absolute;
-            width: 32px;
-            height: 22px;
-            background: linear-gradient(135deg, #ffe135 0%, #ffb700 60%, #ff9500 100%);
+            width: 36px;
+            height: 26px;
+            background: linear-gradient(135deg, #fff176 0%, #ffd54f 40%, #ffb300 75%, #ff8f00 100%);
             border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
             top: 50%;
             left: 50%;
             transform-origin: center;
-            box-shadow: 0 4px 10px rgba(255, 183, 0, 0.5);
+            box-shadow: 0 4px 10px rgba(255, 183, 0, 0.55);
+            border: 1px solid rgba(179, 118, 0, 0.5);
         }
 
         .sunflower-petal:nth-child(1) { transform: translate(-50%, -50%) rotate(0deg) translateY(-38px); }
@@ -548,19 +554,19 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 38px;
-            height: 38px;
-            background: radial-gradient(circle at 35% 35%, #8b6914 0%, #654321 50%, #3d2817 100%);
+            width: 46px;
+            height: 46px;
+            background: radial-gradient(circle at 25% 25%, #f5e1a4 0%, #8b6914 35%, #654321 65%, #3d2817 100%);
             border-radius: 50%;
             box-shadow: inset 0 3px 8px rgba(0,0,0,0.6);
         }
 
         /* Daisy */
         .daisy {
-            width: 72px;
-            height: 72px;
-            left: 32%;
-            top: 100px;
+            width: 82px;
+            height: 82px;
+            left: 31%;
+            top: 90px;
             animation-delay: 3.7s;
             z-index: 9;
             transform: rotate(-25deg);
@@ -574,14 +580,15 @@
 
         .daisy-petal {
             position: absolute;
-            width: 26px;
-            height: 16px;
+            width: 30px;
+            height: 18px;
             background: linear-gradient(to bottom, #ffffff 0%, #fafafa 50%, #f5f5f5 100%);
             border-radius: 50%;
             top: 50%;
             left: 50%;
             transform-origin: center;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.14);
+            border: 1px solid rgba(200, 200, 200, 0.6);
         }
 
         .daisy-petal:nth-child(1) { transform: translate(-50%, -50%) rotate(0deg) translateY(-30px); }
@@ -596,9 +603,9 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 22px;
-            height: 22px;
-            background: radial-gradient(circle at 35% 35%, #fff44f 0%, #ffeb3b 50%, #ffc107 100%);
+            width: 26px;
+            height: 26px;
+            background: radial-gradient(circle at 30% 30%, #fff9c4 0%, #fff176 40%, #ffeb3b 70%, #fbc02d 100%);
             border-radius: 50%;
             box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
         }
@@ -680,8 +687,8 @@
         /* Stems */
         .stem {
             position: absolute;
-            width: 7px;
-            background: linear-gradient(to bottom, #4a7c2c 0%, #5fa342 60%, #6db34d 100%);
+            width: 8px;
+            background: linear-gradient(to bottom, #4a7c2c 0%, #5fa342 55%, #6db34d 100%);
             border-radius: 4px;
             bottom: 0;
             z-index: 1;
@@ -728,6 +735,37 @@
             transform: rotate(-5deg);
             transform-origin: bottom center;
         }
+
+        /* Tulip adjustments for better visibility */
+        .tulip {
+            width: 85px;
+            height: 105px;
+            left: 15%;
+            top: 70px;
+            animation-delay: 3.9s;
+            z-index: 14;
+            transform: rotate(-25deg) scaleX(1.1);
+            filter: drop-shadow(0 8px 15px rgba(0,0,0,0.2));
+        }
+
+        .tulip-petal {
+            background: linear-gradient(135deg, #ff6bb6 0%, #ff1493 50%, #c71585 100%);
+            box-shadow: 
+            inset -4px -3px 12px rgba(0,0,0,0.35),
+            0 8px 20px rgba(255, 20, 147, 0.5),
+            inset 2px 0 8px rgba(255,255,255,0.2);
+            border: 1px solid rgba(199, 21, 133, 0.3);
+        }
+
+        .tulip-stem { 
+            left: 19%; 
+            height: 255px;
+            animation-delay: 3.4s;
+            transform: rotate(-12deg);
+            transform-origin: bottom center;
+            width: 6px;
+            background: linear-gradient(to bottom, #5fa342 0%, #4a7c2c 100%);
+        }
         .stem.tulip-stem { 
             left: 22%; 
             height: 245px;
@@ -761,12 +799,23 @@
         /* Leaves */
         .leaf {
             position: absolute;
-            width: 38px;
-            height: 20px;
+            width: 44px;
+            height: 22px;
             background: linear-gradient(135deg, #6db34d 0%, #5fa342 50%, #4a7c2c 100%);
             border-radius: 0 50% 50% 0;
             box-shadow: inset -2px -2px 6px rgba(0,0,0,0.3);
             animation: leafGrow 1s ease-out backwards;
+        }
+
+        .leaf::before {
+            content: '';
+            position: absolute;
+            left: 22%;
+            top: 10%;
+            width: 2px;
+            height: 80%;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.6), rgba(255,255,255,0));
+            opacity: 0.8;
         }
 
         @keyframes leafGrow {
@@ -1329,4 +1378,3 @@
     </script>
 </body>
 </html>
-
